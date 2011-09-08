@@ -1,6 +1,6 @@
-ebnfDiagram = require './ebnf-diagram.js'
+ebnfDiagram = require '../src/ebnf-diagram.js'
 
-ebnfDiagram.fromFile('./gherkin.ebnf', './gherkinFromFile.png',2000,6000)
+ebnfDiagram.fromFile('./gherkin.ebnf', './gherkin.png',2000,6000)
 
 ebnfDiagram.fromText('''"EBNF defined in itself" {
 
@@ -21,4 +21,4 @@ ebnfDiagram.fromText('''"EBNF defined in itself" {
 
 
 } "EBNF is a cool syntax for describing syntaxes."
-''', './ebnfFromText.png',1000,1000)
+''', './ebnf.png',1000,1000)
