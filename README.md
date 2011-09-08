@@ -35,5 +35,5 @@ If you already have the text:
 
 ### Generates:
   
-  ![EBNF in EBNF](test/ebnf.png)
+  ![EBNF in EBNF](https://github.com/featurist/node-ebnf-diagram/raw/master/test/ebnf.png)
 
