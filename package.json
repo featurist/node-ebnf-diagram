@@ -3,4 +3,7 @@
 , "version" : "0.1.0"
 , "main" : "./src/ebnf-diagram"
 , "homepage" : "https://github.com/featurist/node-ebnf-diagram"
+, "dependencies": {
+    "canvas": ">= 0.7.2"
+  }
 }

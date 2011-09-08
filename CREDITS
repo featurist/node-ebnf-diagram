@@ -1,0 +1,21 @@
+  node-ebnf-diagram uses js taken from Mark Portier's EBNFDiagram jQuery plugin:  https://github.com/marc-portier/ebnfdiagram
+
+EBNFDiagram uses a number of different other projects.
+You might want to check those (and their licenses out)
+
+[js/cc]
+	* version
+		Version 0.30
+
+	* downloaded from
+		http://jscc.jmksf.com/release/jscc-0.30.tar.gz
+
+	* by
+		Copyright © 2007, 2008 by
+		Jan Max Meyer, J.M.K S.F. Software Technologies
+
+	* license 
+		Artistic License (http://www.opensource.org/licenses/artistic-license.php)
+
+	* see docs at
+		https://docs.google.com/viewer?url=http://jscc.jmksf.com/doc/jscc_manual_0.30.pdf
