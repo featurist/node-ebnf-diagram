@@ -1,0 +1,32 @@
+"Gherkin" {
+    
+    space = "\s" .
+    
+    I18N_Feature = "Feature" ":" .
+    I18N_Background = "Background" ":" .
+    I18N_ScenarioOutline = "Scenario Outline" ":" .
+    I18N_Scenario = "Scenario" ":" .
+    I18N_Step = ( "Given" | "When" | "Then" | "And" | "But" ) ":" .
+    I18N_Examples = "Examples" ":" .
+    
+    FeatureHeadingEnd = EOL { EOL } { space } ( I18N_Feature | I18N_Background | I18N_Scenario | I18N_ScenarioOutline | I18N_Examples | "@" | "#" | "EOF" ) .
+    ScenarioHeadingEnd = EOL { EOL } { space } ( I18N_Feature | I18N_Background | I18N_Scenario | I18N_ScenarioOutline | I18N_Step | "@" | "#" | "EOF" ) .
+    ScenarioOutlineHeadingEnd = EOL { EOL } { space } ( I18N_Feature | I18N_Scenario | I18N_Step | "@" | "#" | "EOF" ) .
+    BackgroundHeadingEnd = EOL { EOL } { space } ( I18N_Feature | I18N_Scenario | I18N_ScenarioOutline | I18N_Step | "@" | "#" | "EOF" ) .
+    ExamplesHeadingEnd = EOL { EOL } { space } ( I18N_Feature | "|" | "#" ) .
+    
+    FeatureHeading = { space } I18N_Feature { "^FeatureHeadingEnd" } FeatureHeadingEnd .
+    ScenarioHeading = { space } I18N_Scenario { "^ScenarioHeadingEnd" } ScenarioHeadingEnd .
+    ScenarioOutlineHeading = { space } I18N_ScenarioOutline { "^ScenarioOutlineHeadingEnd" } ScenarioOutlineHeadingEnd .
+    BackgroundHeading = { space } I18N_Background { "^BackgroundHeadingEnd" } BackgroundHeadingEnd .
+    ExamplesHeading = { space } I18N_Examples { "^ExamplesHeadingEnd" } ExamplesHeadingEnd .
+    
+    
+    Comment = { space } "#" { "^EOL" } EOL { EOL } .
+    Tag = "@" "[^@\r\n\t]" { "[^@\r\n\t]" } .
+    Tags = { space } ( Tag { space } { Tag { space } } ) EOL .
+    EOL = ("\n" | "\r\n") .
+    
+    Tokens = { space | EOL } ( Tags | Comment | FeatureHeading | BackgroundHeading | ScenarioHeading | ScenarioOutlineHeading | ExamplesHeading ) .
+
+}
