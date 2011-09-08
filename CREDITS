@@ -1,4 +1,4 @@
-  node-ebnf-diagram uses js taken from Mark Portier's EBNFDiagram jQuery plugin:  https://github.com/marc-portier/ebnfdiagram
+node-ebnf-diagram uses js taken from Mark Portier's EBNFDiagram jQuery plugin:  https://github.com/marc-portier/ebnfdiagram
 
 EBNFDiagram uses a number of different other projects.
 You might want to check those (and their licenses out)
