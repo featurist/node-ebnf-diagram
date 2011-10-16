@@ -17,12 +17,12 @@ STYLES = {
     "SYNTAX":          {
         "margin"            : 10,
         "round"             : 10,
-        "background-fill"   : "rgba(200,200,100, 0.3)",
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba(255,255,255, 0)",
         "background-weight" :   0,
         "separator-stroke"  : "rgba(  0,  0,  0, 0.7)",
         "separator-weight"  :   2,
-        "title-font"        : "30px Arial",
+        "title-font"        : "30px Consolas",
         "title-color"       : "rgba(  0,  0,  0, 0.7)", 
         "title-align"       : "left",
         "comment-font"      : "20px Optimer",
@@ -34,10 +34,10 @@ STYLES = {
     "PRODUCTION":      {
         "margin"            : 10,
         "round"             : 10,
-        "background-fill"   : "rgba(255,255,255, 0.75)",
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba(255,255,255, 0)",
         "background-weight" :   0,
-        "font"              : "10px Arial",
+        "font"              : "15px Consolas",
         "color"             : "rgba(  0,  0,  0, 0.7)", 
         "align"             : "left",
         "baseline"          : "bottom", 
@@ -49,13 +49,13 @@ STYLES = {
     },
     "LITERAL":         {
         "round"             :  10,
-        "background-fill"   : "rgba( 20, 20,200, 0.5)",
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba( 10, 10, 10, 0.8)",
         "background-weight" :  3
     },
     "IDENTIFIER":      {
         "round"             :  0,
-        "background-fill"   : "rgba(200, 20, 20, 0.5)",
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba( 10, 10, 10, 0.8)",
         "background-weight" :  3
     },
@@ -71,7 +71,7 @@ STYLES = {
         "grid"             : 12,
         "font-width"       : 10,
         "font-height"      : 24,
-        "font"             : "12px Arial",
+        "font"             : "10px Consolas",
         "color"            : "rgba(  0,  0,  0, 0.7)"
     }
 }
