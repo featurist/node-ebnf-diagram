@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+var args = process.argv.concat(),
+options = {},
+ebnfd = require('../src/ebnf-diagram.js'),
+fs = require('fs'),
+path = require('path');
+
+while(args.length)
+{
+	switch(args.shift())
+	{
+		case "-i":
+		case "--input":
+			options.input = args.shift();
+		break;
+		case "-o":
+		case "--output":
+			options.output = args.shift();
+		break;
+		case "-d":
+		case "--dimensions":
+			var dim = args.shift().split('x');
+			options.dimensions = { w: Number(dim[0]), h: Number(dim[1]) };
+		break;
+	}
+}        
+
+if(!options.output) options.output = path.dirname(fs.realpathSync(options.input)) + '/diagram.png';
+                        
+
+ebnfd.fromFile(options.input, 
+options.output, 
+options.dimensions.w,
+options.dimensions.h);
