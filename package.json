@@ -1,9 +1,10 @@
-{ "name" : "ebnf-diagram"
-, "description" : "Generates png diagrams from Extended Backus–Naur Form (EBNF) grammars"
-, "version" : "0.1.0"
-, "main" : "./src/ebnf-diagram"
-, "homepage" : "https://github.com/featurist/node-ebnf-diagram"
-, "dependencies": {
-    "canvas": ">= 0.7.2"
-  }
+{
+    "name": "ebnf-diagram",
+    "description": "Generates png diagrams from Extended Backus–Naur Form (EBNF) grammars",
+    "version": "0.1.0",
+    "main": "./src/ebnf-diagram",
+    "homepage": "https://github.com/featurist/node-ebnf-diagram",
+    "dependencies": {
+        "canvas": ">= 0.7.2"
+    }
 }
