@@ -16,28 +16,28 @@ EbnfDiagram.prototype.getGC = function() {
 STYLES = {
     "SYNTAX":          {
         "margin"            : 10,
-        "round"             : 10,
-        "background-fill"   : "rgba(200,200,100, 0.3)",
+        "round"             : 0,
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba(255,255,255, 0)",
         "background-weight" :   0,
-        "separator-stroke"  : "rgba(  0,  0,  0, 0.7)",
+        "separator-stroke"  : "rgba(  0,  0,  0, 0)",
         "separator-weight"  :   2,
-        "title-font"        : "30px Arial",
+        "title-font"        : "20px Consolas",
         "title-color"       : "rgba(  0,  0,  0, 0.7)", 
         "title-align"       : "left",
-        "comment-font"      : "20px Optimer",
+        "comment-font"      : "15px Optimer",
         "comment-color"     : "rgba(0, 0, 0, 0.5)",
         "comment-align"     : "left"
     },
     "PRODUCTION_SET":  {
     },
     "PRODUCTION":      {
-        "margin"            : 10,
-        "round"             : 10,
-        "background-fill"   : "rgba(255,255,255, 0.75)",
+        "margin"            : 30, 
+        "round"             : 0,
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba(255,255,255, 0)",
         "background-weight" :   0,
-        "font"              : "10px Arial",
+        "font"              : "15px Consolas",
         "color"             : "rgba(  0,  0,  0, 0.7)", 
         "align"             : "left",
         "baseline"          : "bottom", 
@@ -49,13 +49,13 @@ STYLES = {
     },
     "LITERAL":         {
         "round"             :  10,
-        "background-fill"   : "rgba( 20, 20,200, 0.5)",
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba( 10, 10, 10, 0.8)",
         "background-weight" :  3
     },
     "IDENTIFIER":      {
         "round"             :  0,
-        "background-fill"   : "rgba(200, 20, 20, 0.5)",
+        "background-fill"   : "rgba(255,255,255, 1)",
         "background-stroke" : "rgba( 10, 10, 10, 0.8)",
         "background-weight" :  3
     },
@@ -71,7 +71,7 @@ STYLES = {
         "grid"             : 12,
         "font-width"       : 10,
         "font-height"      : 24,
-        "font"             : "12px Arial",
+        "font"             : "10px Consolas",
         "color"            : "rgba(  0,  0,  0, 0.7)"
     }
 }
@@ -154,7 +154,7 @@ NODEHANDLERS = {
             var s  = node.style;
             var ds = dia.style;
             var g  = ds.grid;
-            var m  = s.margin;
+            var m  = s.margin;        
 
             var c = node.expr;
             dia.prepare(c);
@@ -168,7 +168,8 @@ NODEHANDLERS = {
             var g  = ds.grid;
             var m  = s.margin;
             var tx = 10;
-            var ty = 10;
+            var ty = 10; 
+                      
             
             var ox = node.width  / 2;
             var oy = node.height / 2;
@@ -184,7 +185,8 @@ NODEHANDLERS = {
             
             // delegate to expression
             var c = node.expr;
-            dia.draw(c, m + s.trail, m);                
+            dia.draw(c, m + s.trail, m);            
+    
             
             GCLIB.line(gc, m + s.trail + node.expr.width , m+ 2*g, node.width -m, m + 2*g);
             GCLIB.line(gc, node.width - m, m+ 1.5 * g, node.width - m, m+ 2.5*g);
@@ -591,7 +593,7 @@ GCLIB.loopUp = function(gc, g, tox, toy, h){
 var DEFAULT_FILL      = "rgb(255,255,255)";
 var DEFAULT_STROKE    = "rgb(  0,  0,  0)";
 var DEFAULT_WEIGHT    = 0;
-var DEFAULT_FONT      = "8px Arial";
+var DEFAULT_FONT      = "8px Consolas";
 var DEFAULT_COLOR     = "rgb(  0,  0,  0)";
 var DEFAULT_ALIGN     = "center";
 var DEFAULT_BASELINE  = "middle";
